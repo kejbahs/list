@@ -11,9 +11,8 @@
           "vipmcihyster5.dooricheh.com",
           "belghyster1.dooricheh.com",
           "belghyster2.dooricheh.com",
-          "belghyster3.dooricheh.com",
-          "belghyster4.dooricheh.com",
-          "belghyster5.dooricheh.com"
+          "vipmcihystertunir.dooricheh.com",
+          "belgtunir.dooricheh.com"
         ],
         "server": "dns-direct"
       }
@@ -56,6 +55,7 @@
       "type": "tun",
       "mtu": 9000,
       "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": false,
@@ -82,23 +82,10 @@
   "log": {
     "level": "panic"
   },
-  "experimental": {
-    "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "/storage/emulated/0/Android",
-      "external_ui_download_detour": "Turkey1 🇹🇷",
-      "default_mode": "Rule"
-    },
-    "cache_file": {
-      "enabled": true,
-      "path": "./cache.db",
-      "store_fakeip": false
-    }
-  },
   "outbounds": [
     {
       "type": "selector",
-      "tag": "DOORICHEH",
+      "tag": "DOORICHEH 📆 19",
       "outbounds": [
         "Turkey1 🇹🇷",
         "Turkey2 🇹🇷",
@@ -107,9 +94,8 @@
         "Turkey5 🇹🇷",
         "Belgium1 🇧🇪",
         "Belgium2 🇧🇪",
-        "Belgium3 🇧🇪",
-        "Belgium4 🇧🇪",
-        "Belgium5 🇧🇪"
+        "TUNNEL 🇮🇷>🇹🇷",
+        "TUNNEL 🇮🇷>🇧🇪"
       ]
     },
     {
@@ -123,11 +109,14 @@
         "Turkey5 🇹🇷",
         "Belgium1 🇧🇪",
         "Belgium2 🇧🇪",
-        "Belgium3 🇧🇪",
-        "Belgium4 🇧🇪",
-        "Belgium5 🇧🇪"
+        "TUNNEL 🇮🇷>🇹🇷",
+        "TUNNEL 🇮🇷>🇧🇪"
       ],
-      "url": "http://cp.cloudflare.com/"
+      "url": "http://cp.cloudflare.com/",
+      "interval": "2m",
+      "tolerance": 30,
+      "idle_timeout": "120m",
+      "interrupt_exist_connections": true
     },
     {
       "down_mbps": 0,
@@ -135,7 +124,7 @@
         "password": "hyspass",
         "type": "salamander"
       },
-      "password": "aminreza:asadolahi74829",
+      "password": "mohandes:mohandes33435",
       "server": "vipmcihyster1.dooricheh.com",
       "server_port": 443,
       "tls": {
@@ -158,7 +147,7 @@
         "password": "hyspass",
         "type": "salamander"
       },
-      "password": "aminreza:asadolahi74829",
+      "password": "mohandes:mohandes33435",
       "server": "vipmcihyster2.dooricheh.com",
       "server_port": 443,
       "tls": {
@@ -181,7 +170,7 @@
         "password": "hyspass",
         "type": "salamander"
       },
-      "password": "aminreza:asadolahi74829",
+      "password": "mohandes:mohandes33435",
       "server": "vipmcihyster3.dooricheh.com",
       "server_port": 443,
       "tls": {
@@ -204,7 +193,7 @@
         "password": "hyspass",
         "type": "salamander"
       },
-      "password": "aminreza:asadolahi74829",
+      "password": "mohandes:mohandes33435",
       "server": "vipmcihyster4.dooricheh.com",
       "server_port": 443,
       "tls": {
@@ -227,7 +216,7 @@
         "password": "hyspass",
         "type": "salamander"
       },
-      "password": "aminreza:asadolahi74829",
+      "password": "mohandes:mohandes33435",
       "server": "vipmcihyster5.dooricheh.com",
       "server_port": 443,
       "tls": {
@@ -250,7 +239,7 @@
         "password": "hyspass",
         "type": "salamander"
       },
-      "password": "aminreza:asadolahi74829",
+      "password": "mohandes:mohandes33435",
       "server": "belghyster1.dooricheh.com",
       "server_port": 443,
       "tls": {
@@ -273,7 +262,7 @@
         "password": "hyspass",
         "type": "salamander"
       },
-      "password": "aminreza:asadolahi74829",
+      "password": "mohandes:mohandes33435",
       "server": "belghyster2.dooricheh.com",
       "server_port": 443,
       "tls": {
@@ -291,16 +280,16 @@
       "tag": "Belgium2 🇧🇪"
     },
     {
-      "down_mbps": 60,
+      "down_mbps": 80,
       "obfs": {
         "password": "hyspass",
         "type": "salamander"
       },
-      "password": "aminreza:asadolahi74829",
-      "server": "belghyster1.dooricheh.com",
-      "server_port": 443,
+      "password": "mohandes:mohandes33435",
+      "server": "vipmcihystertunir.dooricheh.com",
+      "server_port": 21859,
       "tls": {
         "alpn": [
           "h3"
         ],
-        "certificate": "-----BEGIN CERTIFICATE-----\nMIIEpjCCA46gAwIBAgIUTTka8yPCFyGEcbz/k30WnqmsPgQwDQYJKoZIhvcNAQEL\nBQAwgYsxCzAJBgNVBAYTAlVTMRkwFwYDVQQKExBDbG91ZEZsYXJlLCBJbmMuMTQw\nMgYDVQQLEytDbG91ZEZsYXJlIE9yaWdpbiBTU0wgQ2VydGlmaWNhdGUgQXV0aG9y\naXR5MRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQIEwpDYWxpZm9ybmlh\nMB4XDTIzMTIyNjE2MDAwMFoXDTM4MTIyMjE2MDAwMFowYjEZMBcGA1UEChMQQ2xv\ndWRGbGFyZSwgSW5jLjEdMBsGA1UECxMUQ2xvdWRGbGFyZSBPcmlnaW4gQ0ExJjAk\nBgNVBAMTHUNsb3VkRmxhcmUgT3JpZ2luIENlcnRpZmljYXRlMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyrKSVA9GIaAivI/Peu240S9O1Pk2beNWajR6\nKoFlvuDc1EeoceDsPgUS2qtoyYs5SyOdHuYdfh55/MyWlbhmCWIa/WeU4SsVASm6\nZy6Ag864PNknqGJz6pJ0fb9rlIVk7gDOQ2MVsARN1bFQACxy3ap/Lly47s46xnKf\noLmwdiH1hcCTzQoDcrCeXu2wmnIUsJ1IqKMztYNa7/h9+5j3O9TVLAIBzmEMhWBr\nihJ33L9Jwnb+HRmH0bhwbUw38sVo/z5yp7eErcyWH0fCU9dve08E/xqj+kxI/t4C\nF6JXfEDRvAXx02iCHeZFpkQSUa9w1wFnuSV6WN2djeH8MoqwfwIDAQABo4IBKDCC\nASQwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD\nATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBRHcmm52ef0L3Y8rYLdDHQg
+        "certificate": "-----BEGIN CERTIFICATE-----\nMIIEpjCCA46gAwIBAgIUGoioUtwkecA0ZCDf4zYfi5s40WswDQYJKoZIhvcNAQEL\nBQAwgYsxCzAJBgNVBAYTAlVTMRkwFwYDVQQKExBDbG91ZEZsYXJlLCBJbmMuMTQw\nMgYDVQQLEytDbG91ZEZsYXJlIE9yaWdpbiBTU0wgQ2VydGlmaWNhdGUgQXV0aG9y\naXR5MRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQIEwpDYWxpZm9ybmlh\nMB4XDTIzMTIyODExMTUwMFoXDTM4MTIyNDExMTUwMFowYjEZMBcGA1UEChMQQ2xv\ndWRGbGFyZSwgSW5jLjEdMBsGA1UECxMUQ2xvdWRGbGFyZSBPcmlnaW4gQ0ExJjAk\nBgNVBAMTHUNsb3VkRmxhcmUgT3JpZ2luIENlcnRpZmljYXRlMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqnCJW3wBjOlFA6GZ6UZzMILmba5vKgKC1GJb\nFLPoMKZSGCj7krko8dLCAIJw6+bQw5mMf9MWo0OPIQJYQ663H139tM1Xn9BgzDpo\nTFdzmpAPV/p2nNAvC17mJnB/s+zJpfAMT8daDOkvEGMPx5MROBVLuGMz3xz9nQb8\n62X9VpztKqCEaMQ1PtKAt0ehJiyvU0V+X5RCkGDvYmYPWl32QhJCIzpmyaQM8D0Q\naMbxTADLvY+bzlvuNvJFbwkJ9NgemfyPmmuulLig8s//ZQshUHilpUvmXgiu6Dx1\nKh7XN8wZe61jmoG4OGT5hEwGPajOfr0cTrSOUHfQFzzUsxgzjQIDAQABo4IBKDCC\nASQwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD\nATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBQfhW5K9SLOspEGe/Z3pgczuUcIEDAf\nBgNVHSMEGDAWgBQk6FNXXXw0QIep65TbuuEWePwppDBABggrBgEFBQcBAQQ0MDIw\nMAYIKwYBBQUHMAGGJGh0dHA6Ly9vY3NwLmNsb3VkZmxhcmUuY29tL29yaWdpbl9j\nYTApBgNVHREEIjAggg8qLmRvb3JpY2hlaC5jb22CDWRvb3JpY2hlaC5jb20wOAYD\nVR0fBDEwLzAtoCugKYYnaHR0cDov

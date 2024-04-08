@@ -87,7 +87,7 @@
       "type": "selector",
       "tag": "DOORICHEH 📆 19",
       "outbounds": [
-        "Turkey1 🇹🇷",
+        "sw",
         "Turkey2 🇹🇷",
         "Turkey3 🇹🇷",
         "Turkey4 🇹🇷",
@@ -102,7 +102,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Turkey1 🇹🇷",
+        "sw",
         "Turkey2 🇹🇷",
         "Turkey3 🇹🇷",
         "Turkey4 🇹🇷",
@@ -121,11 +121,11 @@
     {
       "down_mbps": 0,
       "obfs": {
-        "password": "hyspass",
+        "password": "9ijufI4LW_ehlst!Pho-",
         "type": "salamander"
       },
-      "password": "mehrdadvip:mehrdadvip67299",
-      "server": "vipmcihyster1.dooricheh.com",
+      "password": "9ijufI4LW_ehlst!Pho-",
+      "server": "95.179.150.22",
       "server_port": 443,
       "tls": {
         "alpn": [
@@ -133,13 +133,13 @@
         ],
         "certificate": "-----BEGIN CERTIFICATE-----\nMIIEpjCCA46gAwIBAgIUGoioUtwkecA0ZCDf4zYfi5s40WswDQYJKoZIhvcNAQEL\nBQAwgYsxCzAJBgNVBAYTAlVTMRkwFwYDVQQKExBDbG91ZEZsYXJlLCBJbmMuMTQw\nMgYDVQQLEytDbG91ZEZsYXJlIE9yaWdpbiBTU0wgQ2VydGlmaWNhdGUgQXV0aG9y\naXR5MRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQIEwpDYWxpZm9ybmlh\nMB4XDTIzMTIyODExMTUwMFoXDTM4MTIyNDExMTUwMFowYjEZMBcGA1UEChMQQ2xv\ndWRGbGFyZSwgSW5jLjEdMBsGA1UECxMUQ2xvdWRGbGFyZSBPcmlnaW4gQ0ExJjAk\nBgNVBAMTHUNsb3VkRmxhcmUgT3JpZ2luIENlcnRpZmljYXRlMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqnCJW3wBjOlFA6GZ6UZzMILmba5vKgKC1GJb\nFLPoMKZSGCj7krko8dLCAIJw6+bQw5mMf9MWo0OPIQJYQ663H139tM1Xn9BgzDpo\nTFdzmpAPV/p2nNAvC17mJnB/s+zJpfAMT8daDOkvEGMPx5MROBVLuGMz3xz9nQb8\n62X9VpztKqCEaMQ1PtKAt0ehJiyvU0V+X5RCkGDvYmYPWl32QhJCIzpmyaQM8D0Q\naMbxTADLvY+bzlvuNvJFbwkJ9NgemfyPmmuulLig8s//ZQshUHilpUvmXgiu6Dx1\nKh7XN8wZe61jmoG4OGT5hEwGPajOfr0cTrSOUHfQFzzUsxgzjQIDAQABo4IBKDCC\nASQwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD\nATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBQfhW5K9SLOspEGe/Z3pgczuUcIEDAf\nBgNVHSMEGDAWgBQk6FNXXXw0QIep65TbuuEWePwppDBABggrBgEFBQcBAQQ0MDIw\nMAYIKwYBBQUHMAGGJGh0dHA6Ly9vY3NwLmNsb3VkZmxhcmUuY29tL29yaWdpbl9j\nYTApBgNVHREEIjAggg8qLmRvb3JpY2hlaC5jb22CDWRvb3JpY2hlaC5jb20wOAYD\nVR0fBDEwLzAtoCugKYYnaHR0cDovL2NybC5jbG91ZGZsYXJlLmNvbS9vcmlnaW5f\nY2EuY3JsMA0GCSqGSIb3DQEBCwUAA4IBAQChAF8SZ722D2Za+9z7ti7JdrY4zLQo\nuprmJsMXSqNx09+OBeJnUv4fYYUaMWE6uNZHrzDsD2iqwZjxqcPBss1+878C/IY2\n0e6NEPefNO6fM0tWl+XM4OmrM1NB6EbX1OO2btGfbGgUaeWbrAybDVl5t0xmA/WH\ncOTEX/3rGppXPYm/JwwYdjIRjv5v8boJX4ulbwsnLq+awSKYNTv5epR9IY3N9uA8\n3dX5nG68ewOaY4cBWDyzZufGe3Ck8fvTzsvWBBLZiZc4EUgK+EQJr2XzADVWfUov\n3cLQp9VZTlOsy+oVSX6BcW0KlIqwmKrdO/xXS9Nxn6NTMfHDjD9YYcAK\n-----END CERTIFICATE-----",
         "enabled": true,
-        "insecure": false,
-        "server_name": "vipmcihysterh3.dooricheh.com"
+        "insecure": true,
+        "server_name": "google.com"
       },
       "up_mbps": 0,
       "type": "hysteria2",
       "domain_strategy": "",
-      "tag": "Turkey1 🇹🇷"
+      "tag": "sw"
     },
     {
       "down_mbps": 80,

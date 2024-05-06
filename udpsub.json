@@ -80,7 +80,8 @@
         "A1🇳🇱",
         "A2🇫🇮",
         "A3🇳🇱",
-		"A4🇧🇪"
+		"A4🇧🇪",
+   "A5🇹🇷",
       ]
     },
     {
@@ -90,7 +91,8 @@
         "A1🇳🇱",
         "A2🇫🇮",
         "A3🇳🇱",
-		"A4🇧🇪"
+		"A4🇧🇪",
+"A5🇹🇷"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -167,6 +169,21 @@
         "password": "hyspass"
       },
       "tag": "A4🇧🇪",
+      "type": "hysteria2"
+    },
+{
+      "server": "193.38.34.208",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "alireza7kuser:alireza7kuser546789",
+      "obfs": {
+        "type": "salamander",
+        "password": "hyspass"
+      },
+      "tag": "A5🇹🇷",
       "type": "hysteria2"
     }
   ],

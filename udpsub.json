@@ -1,274 +1,256 @@
 {
   "log": {
-    "disabled": false,
-    "level": "info",
+    "level": "warn",
+    "output": "box.log",
     "timestamp": true
   },
   "dns": {
     "servers": [
       {
-        "tag": "proxyDns",
-        "address": "1.1.1.1",
-        "detour": "select"
+        "tag": "dns-remote",
+        "address": "https://8.8.8.8/dns-query",
+        "address_resolver": "dns-direct"
       },
       {
-        "tag": "localDns",
-        "address": "https://223.5.5.5/dns-query",
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
         "detour": "direct"
       },
       {
-        "tag": "block",
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
         "address": "rcode://success"
       }
     ],
     "rules": [
-            {
-                "domain_suffix": [
-                    ".ir"
-                ],
-                "server": "dns-direct"
-            },
-
       {
-        "server": "localDns",
-        "outbound": "any",
-        "disable_cache": true
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "server": "dns-direct"
       },
       {
-        "server": "localDns",
-        "clash_mode": "direct"
-      },
-      {
-        "server": "proxyDns",
-        "clash_mode": "global"
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
       }
-
     ],
-    "strategy": "ipv4_only"
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "188.114.96.6",
+        "188.114.97.6",
+        "2a06:98c1:3120::3",
+        "2a06:98c1:3121::3",
+        "104.18.203.232",
+        "104.18.202.232",
+        "188.114.96.3",
+        "188.114.97.3",
+        "2a06:98c1:3121::6",
+        "2a06:98c1:3120::6"
+      ]
+    },
+    "independent_cache": true
   },
   "inbounds": [
     {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
       "sniff": true,
-      "type": "mixed",
-      "listen": "127.0.0.1",
-      "listen_port": 1081
+      "sniff_override_destination": true
     },
     {
-      "stack": "system",
-      "auto_route": true,
-      "inet4_address": "172.19.0.1/30",
-      "mtu": 9000,
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
       "sniff": true,
-      "strict_route": true,
-      "type": "tun",
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 1081
-        }
-      }
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450,
+      "override_address": "1.1.1.1",
+      "override_port": 53
     }
   ],
   "outbounds": [
     {
-      "tag": "select",
       "type": "selector",
+      "tag": "select",
       "outbounds": [
         "auto",
         "A1🇳🇱",
         "A2🇫🇮",
         "A3🇳🇱",
-        "A4🇧🇪",
-        "A5🇹🇷",
-      ]
+        "A4🇧🇪"
+      ],
+      "default": "auto"
     },
     {
-      "tag": "auto",
       "type": "urltest",
+      "tag": "auto",
       "outbounds": [
         "A1🇳🇱",
         "A2🇫🇮",
         "A3🇳🇱",
-	      	"A4🇧🇪",
-        "A5🇹🇷"
+        "A4🇧🇪"
       ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50
+      "url": "http://www.google.com/generate_204",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
     },
     {
-      "tag": "direct",
-      "type": "direct"
-    },
-    {
-      "tag": "block",
-      "type": "block"
-    },
-    {
-      "tag": "dns-out",
-      "type": "dns"
-    },
-   
-    {
+      "type": "hysteria2",
+      "tag": "A1🇳🇱",
       "server": "147.45.76.99",
       "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "password": "cef1e7a47565b431",
       "obfs": {
         "type": "salamander",
         "password": "2c5ef5135559d4f5"
       },
-      "tag": "A1🇳🇱",
-      "type": "hysteria2"
-    },
-	{
-      "server": "94.142.138.220",
-      "server_port": 443,
+      "password": "cef1e7a47565b431",
       "tls": {
         "enabled": true,
         "insecure": true
-      },
-      "password": "Hel1AezakeJbahs",
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "A2🇫🇮",
+      "server": "94.142.138.220",
+      "server_port": 443,
       "obfs": {
         "type": "salamander",
         "password": "Hel1AezakeJbahs"
       },
-      "tag": "A2🇫🇮",
-      "type": "hysteria2"
-    },
-        {        
-	  "server": "147.45.76.180",
-      "server_port": 443,
+      "password": "Hel1AezakeJbahs",
       "tls": {
         "enabled": true,
         "insecure": true
-      },
-      "password": "d209a78e3272cbeb",
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "A3🇳🇱",
+      "server": "147.45.76.180",
+      "server_port": 443,
       "obfs": {
         "type": "salamander",
         "password": "b1752cdc49b48a29"
       },
-      "tag": "A3🇳🇱",
-      "type": "hysteria2"
+      "password": "d209a78e3272cbeb",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
     },
-	{
+    {
+      "type": "hysteria2",
+      "tag": "A4🇧🇪",
       "server": "141.98.233.25",
       "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "insecure": true
+      "obfs": {
+        "type": "salamander",
+        "password": "hyspass"
       },
       "password": "kamranfxvip:kamranfxvip72823",
-      "obfs": {
-        "type": "salamander",
-        "password": "hyspass"
-      },
-      "tag": "A4🇧🇪",
-      "type": "hysteria2"
-    },
-{
-      "server": "193.38.34.208",
-      "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": true
-      },
-      "password":"alireza7kuser:alireza7kuser546789",
-      "obfs": {
-        "type": "salamander",
-        "password": "hyspass"
-      },
-      "tag": "A5🇹🇷",
-      "type": "hysteria2"
+      }
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "5-8"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
     }
   ],
   "route": {
     "geoip": {
-            "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
-            "download_detour": "direct"
-        },
-        "geosite": {
-            "download_url": "https://github.com\/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
-            "download_detour": "direct"
-        },
+      "path": "geo-assets/sagernet-sing-geoip-geoip.db"
+    },
+    "geosite": {
+      "path": "geo-assets/sagernet-sing-geosite-geosite.db"
+    },
     "rules": [
       {
-        "protocol": "dns",
+        "inbound": "dns-in",
         "outbound": "dns-out"
       },
       {
-        "network": "udp",
-        "port": 443,
-        "outbound": "block"
+        "port": 53,
+        "outbound": "dns-out"
       },
       {
-        "clash_mode": "direct",
+        "clash_mode": "Direct",
         "outbound": "direct"
       },
       {
-        "clash_mode": "global",
+        "clash_mode": "Global",
         "outbound": "select"
       },
-            {
-                "domain_suffix": [
-                    "ir"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geoip": [
-                    "ir",
-                    "private",
-                    "arvancloud"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": [
-                    "ir"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": [
-                    "malware",
-                    "phishing",
-                    "cryptominers"
-                ],
-                "outbound": "block"
-            },
-            {
-                "geosite": [
-                    "other"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geoip": [
-                    "malware",
-                    "phishing"
-                ],
-                "outbound": "block"
-            }
-
+      {
+        "geoip": "private",
+        "outbound": "bypass"
+      },
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "geoip": "ir",
+        "outbound": "bypass"
+      }
     ],
+    "final": "select",
     "auto_detect_interface": true,
-    "final": "select"
+    "override_android_vpn": true
   },
   "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
     "clash_api": {
-  "external_controller": "127.0.0.1:9090",
-  "external_ui": "",
-  "external_ui_download_url": "",
-  "external_ui_download_detour": "",
-  "secret":"",
-  "default_mode": ""
-
+      "external_controller": "127.0.0.1:6756",
+      "secret": "wfX_CIrGJMNxuTea"
     }
   }
-}
 }

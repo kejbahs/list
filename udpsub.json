@@ -80,7 +80,7 @@
         "A1🇳🇱",
         "A2🇫🇮",
         "A3🇳🇱",
-		"A4🇳🇱"
+		"A4🇧🇪"
       ]
     },
     {
@@ -155,18 +155,18 @@
       "type": "hysteria2"
     },
 	{
-      "server": "[2a12:5940:431d::2]",
+      "server": "141.98.233.25",
       "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "d209a78e3272cbeb",
+      "password": "Kamranfxbel:kamranfxbel16383",
       "obfs": {
         "type": "salamander",
-        "password": "b1752cdc49b48a29"
+        "password": "hyspass"
       },
-      "tag": "A4🇳🇱",
+      "tag": "A4🇧🇪",
       "type": "hysteria2"
     }
   ],

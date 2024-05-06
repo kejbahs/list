@@ -168,7 +168,7 @@
 {
       "type": "hysteria2",
       "tag": "A5🇨🇦",
-      "server": "147.45.76.180",
+      "server": "198.50.119.130",
       "server_port": 9602,
       "obfs": {
         "type": "salamander",

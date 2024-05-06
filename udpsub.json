@@ -125,16 +125,16 @@
       "type": "hysteria2"
     },
 	{
-      "server": "141.98.233.25",
-      "server_port": 443,
+      "server": "198.50.119.130",
+      "server_port": 9602,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "kamranfxvip:kamranfxvip72823",
+      "password": "f6e4b19a3110d19d",
       "obfs": {
         "type": "salamander",
-        "password": "hyspass"
+        "password": "f6e4b19a3110d19d"
       },
       "tag": "A2",
       "type": "hysteria2"

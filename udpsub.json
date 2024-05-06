@@ -101,6 +101,7 @@
         "A1🇹🇷",
         "A2🇫🇮",
         "A3🇳🇱",
+"A3🇺🇲",
         "A4🇧🇪"
       ],
       "default": "auto"
@@ -112,6 +113,7 @@
         "A1🇹🇷",
         "A2🇫🇮",
         "A3🇳🇱",
+"A3🇺🇲",
         "A4🇧🇪"
       ],
       "url": "http://www.google.com/generate_204",
@@ -151,6 +153,21 @@
     {
       "type": "hysteria2",
       "tag": "A3🇳🇱",
+      "server": "147.45.76.180",
+      "server_port": 443,
+      "obfs": {
+        "type": "salamander",
+        "password": "b1752cdc49b48a29"
+      },
+      "password": "d209a78e3272cbeb",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+{
+      "type": "hysteria2",
+      "tag": "A3🇺🇲",
       "server": "147.45.76.180",
       "server_port": 443,
       "obfs": {

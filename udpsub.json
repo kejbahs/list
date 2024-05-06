@@ -77,10 +77,10 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "A1.NL",
-        "A2.FL",
-        "A3.NL",
-		"A4.BL"
+        "A1",
+        "A2",
+        "A3",
+		"A4"
       ]
     },
     {
@@ -121,7 +121,7 @@
         "type": "salamander",
         "password": "2c5ef5135559d4f5"
       },
-      "tag": "A1.NL",
+      "tag": "A1",
       "type": "hysteria2"
     },
 	{
@@ -136,7 +136,7 @@
         "type": "salamander",
         "password": "Hel1AezakeJbahs"
       },
-      "tag": "A2.FL",
+      "tag": "A2",
       "type": "hysteria2"
     },
         {        
@@ -151,7 +151,7 @@
         "type": "salamander",
         "password": "b1752cdc49b48a29"
       },
-      "tag": "A3.NL",
+      "tag": "A3",
       "type": "hysteria2"
     },
 	{
@@ -166,7 +166,7 @@
         "type": "salamander",
         "password": "hyspass"
       },
-      "tag": "A4.BL",
+      "tag": "A4",
       "type": "hysteria2"
     }
   ],

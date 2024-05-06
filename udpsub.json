@@ -77,7 +77,7 @@
       "type": "selector",
       "outbounds": [
         "auto",
-        "A1",
+        "A1🇳🇱",
         "A2",
         "A3",
 		"A4"
@@ -87,7 +87,7 @@
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "A1",
+        "A1🇳🇱",
         "A2",
         "A3",
 		"A4"
@@ -121,7 +121,7 @@
         "type": "salamander",
         "password": "2c5ef5135559d4f5"
       },
-      "tag": "A1",
+      "tag": "A1🇳🇱",
       "type": "hysteria2"
     },
 	{

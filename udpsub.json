@@ -125,16 +125,16 @@
       "type": "hysteria2"
     },
 	{
-      "server": "198.50.119.130",
-      "server_port": 9602,
+      "server": "94.142.138.220",
+      "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "f6e4b19a3110d19d",
+      "password": "Hel1AezakeJbahs",
       "obfs": {
         "type": "salamander",
-        "password": "f6e4b19a3110d19d"
+        "password": "Hel1AezakeJbahs"
       },
       "tag": "A2",
       "type": "hysteria2"

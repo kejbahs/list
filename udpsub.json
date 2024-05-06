@@ -178,7 +178,7 @@
         "enabled": true,
         "insecure": true
       },
-      "password": "alireza7kuser:alireza7kuser546789",
+      "password":"alireza7kuser:alireza7kuser546789",
       "obfs": {
         "type": "salamander",
         "password": "hyspass"

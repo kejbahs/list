@@ -103,7 +103,7 @@
       "type": "hysteria2",
       "tag": "A1🇹🇷",
       "server": "193.38.34.208",
-      "server_port": 443,
+      "server_port": 444,
       "obfs": {
         "type": "salamander",
         "password": "hyspass"

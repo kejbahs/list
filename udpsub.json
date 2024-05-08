@@ -77,7 +77,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "A1🇹🇷",
+        "A6🇫🇮",
         "A2🇫🇮",
         "A3🇳🇱",
 "A5🇨🇦",
@@ -89,7 +89,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "A1🇹🇷",
+        "A6🇫🇮",
         "A2🇫🇮",
         "A3🇳🇱",
 "A5🇨🇦",
@@ -101,14 +101,14 @@
     },
     {
       "type": "hysteria2",
-      "tag": "A1🇹🇷",
-      "server": "193.38.34.208",
-      "server_port": 444,
+      "tag": "A6🇫🇮",
+      "server": "[2a12:5940:79d6::2]",
+      "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "hyspass"
+        "password": "Hel1AezakeJbahs"
       },
-      "password": "alireza7kuser:alireza7kuser546789",
+      "password": "Hel1AezakeJbahs",
       "tls": {
         "enabled": true,
         "insecure": true

@@ -179,13 +179,13 @@
 {
       "type": "hysteria2",
       "tag": "A1🇹🇷",
-      "server": "147.45.76.180",
+      "server": "213.142.148.153",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "b1752cdc49b48a29"
+        "password": ""
       },
-      "password": "d209a78e3272cbeb",
+      "password": "a0cd8b88-9f7a-48b4-a40b-d67dc53d3a03",
       "tls": {
         "enabled": true,
         "insecure": true

@@ -78,7 +78,7 @@
       "outbounds": [
         "auto",
         "H🇺🇲",
-        "A2🇫🇮",
+        "M🇳🇱",
         "A3🇳🇱",
 "A5🇨🇦",
         "A4🇧🇪",
@@ -91,7 +91,7 @@
       "tag": "auto",
       "outbounds": [
         "H🇺🇲",
-        "A2🇫🇮",
+        "M🇳🇱",
         "A3🇳🇱",
 "A5🇨🇦",
         "A4🇧🇪",
@@ -118,14 +118,10 @@
     },
     {
       "type": "hysteria2",
-      "tag": "A2🇫🇮",
-      "server": "94.142.138.220",
+      "tag": "M🇳🇱",
+      "server": "45.135.180.4",
       "server_port": 443,
-      "obfs": {
-        "type": "salamander",
-        "password": "Hel1AezakeJbahs"
-      },
-      "password": "Hel1AezakeJbahs",
+      "password": "WKAPupuylb1Z44WBOtEshyzqREh0bE",
       "tls": {
         "enabled": true,
         "insecure": true

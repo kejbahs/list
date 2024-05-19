@@ -105,7 +105,7 @@
       "type": "hysteria2",
       "tag": "G3🇩🇪",
       "server": "[2a12:3e80:1:44d::]",
-      "server_port": 8443,
+      "server_port": 40443,
       "password": "AD1C3B63-5B58-48B7-BB66-E899E7DC9481",
       "tls": {
         "enabled": true,

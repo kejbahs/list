@@ -78,7 +78,7 @@
       "outbounds": [
         "auto",
         "G3🇩🇪",
-        "M🇳🇱",
+        "AR🇫🇮",
         "A3🇳🇱",
 "A5🇨🇦",
         "A4🇧🇪",
@@ -91,7 +91,7 @@
       "tag": "auto",
       "outbounds": [
         "G3🇩🇪",
-        "M🇳🇱",
+        "AR🇫🇮",
         "A3🇳🇱",
 "A5🇨🇦",
         "A4🇧🇪",
@@ -112,16 +112,35 @@
         "insecure": true
       }
     },
-    {
-      "type": "hysteria2",
-      "tag": "M🇳🇱",
-      "server": "45.135.180.4",
+   {
+      "type": "vless",
+      "tag": "AR🇫🇮",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-20",
+        "sleep": "0"
+      },
+      "server": "188.114.96.12",
       "server_port": 443,
-      "password": "WKAPupuylb1Z44WBOtEshyzqREh0bE",
+      "uuid": "5bdf790f-0af2-4481-a624-41b66e7e3489",
       "tls": {
         "enabled": true,
-        "insecure": true
-      }
+        "server_name": "cdn.ircp.online",
+        "alpn": "http/1.1",
+        "min_version": "1.3",
+        "max_version": "1.3",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@ln2ray",
+        "headers": {
+          "Host": "cdn.ircp.online"
+        }
+      },
     },
     {
       "type": "hysteria2",

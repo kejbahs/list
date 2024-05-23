@@ -178,7 +178,7 @@
       "type": "vless",
       "tag": "P🇨🇵",
       "tls_fragment": {
-        "enabled": true,
+        "enabled": false,
         "size": "10-20",
         "sleep": "0"
       },

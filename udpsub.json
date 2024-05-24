@@ -132,14 +132,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/upload",
-        "headers": {
-          "Host": "diy-cleared-unique-decline.trycloudflare.com"
-        }
       }
 },
     {

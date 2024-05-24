@@ -122,7 +122,7 @@
         "size": "10-20",
         "sleep": "0"
       },
-      "server": "188.114.96.12",
+      "server": "www.speedtest.net",
       "server_port": 443,
       "uuid": "fa28123b-a613-4a1b-a802-fea47a9b63f4",
       "tls": {

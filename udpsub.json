@@ -139,6 +139,7 @@
         "idle_timeout": "15s",
         "ping_timeout": "15s"
       }
+}
 },
     {
       "type": "hysteria2",

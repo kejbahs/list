@@ -133,6 +133,7 @@
           "enabled": true,
           "fingerprint": "firefox"
       }
+}
 "transport": {
         "type": "grpc",
         "service_name": "games",

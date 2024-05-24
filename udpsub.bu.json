@@ -79,6 +79,8 @@
         "auto",
         "G3🇩🇪",
         "B🇫🇮",
+"T🇮🇷",
+"R6🇸🇪",
         "A3🇳🇱",
 "A5🇨🇦",
 "P🇨🇵",
@@ -93,6 +95,8 @@
       "outbounds": [
         "G3🇩🇪",
         "B🇫🇮",
+"T🇮🇷",
+"R6🇸🇪",
         "A3🇳🇱",
 "A5🇨🇦",
 "P🇨🇵",
@@ -137,6 +141,49 @@
       "transport": {
         "type": "grpc",
         "service_name": "games"
+      }
+},
+{
+      "type": "vless",
+      "tag": "T🇮🇷",
+      "tls_fragment": {
+        "enabled": false,
+        "size": "10-20",
+        "sleep": "0"
+      },
+      "server": "todo-list-notion.aminv.ir",
+      "server_port": 9280,
+      "uuid": "8d4a2a3f-8e19-467d-b2fb-f185aab49ad6",
+      "transport": {
+        "type": "http",
+        "host": "telewebion.com",
+        "path": "/live/varzesh",
+        "method": "GET"
+}
+},
+{
+       "type": "vless",
+      "tag": "R6🇸🇪",
+      "server": "[2a12:5940:b4b9::3f]",
+      "server_port": 22347,
+      "uuid": "498be228-b35a-449f-8a48-f35334e08f43",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.speedtest.net",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "qTD3q96qRuVA9TCgLx-5aRlgMNi740CubkHiUMDa2Hk",
+          "short_id": "1b9a"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "kami"
       }
 },
     {

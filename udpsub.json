@@ -136,9 +136,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "games",
-        "idle_timeout": "15s",
-        "ping_timeout": "15s"
+        "service_name": "games"
       }
 },
     {

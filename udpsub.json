@@ -115,25 +115,23 @@
       }
     },
    {
-      "type": "vless",
+       "type": "vmess",
       "tag": "🇸🇪1",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "30-35",
-        "sleep": "10-20"
-      },
-      "server": "discord.com",
-      "server_port": 443,
-      "uuid": "deefd091-42d7-4716-a746-42024a6e2498",
+      "server": "cf3.baraye-azadi-info.com",
+      "server_port": 8443,
+      "uuid": "2744fa8b-ecfe-4e22-ba51-90faa234454e",
+      "security": "auto",
+      "authenticated_length": true,
       "tls": {
         "enabled": true,
-        "server_name": "diy-cleared-unique-decline.trycloudflare.com",
-        "alpn": "http/1.1",
-        "min_version": "1.1",
-        "max_version": "1.3",
+        "server_name": "dl1.baraye-azadi-info.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {

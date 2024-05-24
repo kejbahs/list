@@ -78,7 +78,7 @@
       "outbounds": [
         "auto",
         "G3🇩🇪",
-        "🇸🇪1",
+        "B🇫🇮",
         "A3🇳🇱",
 "A5🇨🇦",
 "P🇨🇵",
@@ -92,7 +92,7 @@
       "tag": "auto",
       "outbounds": [
         "G3🇩🇪",
-        "🇸🇪1",
+        "B🇫🇮",
         "A3🇳🇱",
 "A5🇨🇦",
 "P🇨🇵",
@@ -116,7 +116,7 @@
     },
    {
        "type": "vmess",
-      "tag": "🇸🇪1",
+      "tag": "B🇫🇮",
       "server": "cf3.baraye-azadi-info.com",
       "server_port": 8443,
       "uuid": "2744fa8b-ecfe-4e22-ba51-90faa234454e",
@@ -132,6 +132,12 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+      }
+"transport": {
+        "type": "grpc",
+        "service_name": "games",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
       }
 },
     {

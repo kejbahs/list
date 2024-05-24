@@ -132,9 +132,9 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-      }
-}
-"transport": {
+        }
+      },
+      "transport": {
         "type": "grpc",
         "service_name": "games",
         "idle_timeout": "15s",
